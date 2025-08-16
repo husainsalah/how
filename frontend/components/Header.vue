@@ -49,11 +49,11 @@ const currentRouteNameIsNotHome = computed(() => {
             <li>
               <NuxtLink to="/contact" class="uppercase hover:text-green-100">Contact</NuxtLink>
             </li>
-            <!--
+            
             <li>
-              <a href="https://houseofwadjet.bandcamp.com" class="uppercase hover:text-green-100">Bandcamp</a>
+              <a href="https://houseofwadjet.bandcamp.com" class="uppercase hover:text-green-100" target="_blank">Merch</a>
             </li>
-            -->
+            
             
           </ul>
             </div>

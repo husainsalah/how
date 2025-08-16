@@ -2,7 +2,7 @@
   <div class="page text-black font-sans">
     <section class="min-h-screen pt-24">
       <Header />
-      <main class=""><slot /></main>
+      <main class="mt-8 md:mt-4"><slot /></main>
       <Footer />
     </section>
   </div>

@@ -53,7 +53,7 @@ export default defineComponent({
                 CONT<span class="neonText header1">A</span>CT</h1>
         
     </div>    
-    <div class="px-12 flex gap-8">
+    <div class="px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
     
     <div>
         

@@ -16,11 +16,11 @@ useSiteMetadata({
       >
         <div class="flex flex-col gap-4 items-center">
             <h1 animate-breath class=" text-2xl md:text-4xl animate-(--breath) text-white prose uppercase">
-                Art<span class="neonText header1">i</span>sts & Collaborators</h1>
+                Art<span class="neonText header1">i</span>sts</h1>
         <div class="flex">
-<div class="grid grid-cols-3 gap-8 p-12 justify-center">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-12 justify-center">
   <div class="pb-6">
-      <img src="frontend/assets/images/husain_color-037.jpg" style="width: 300px; height: 300px;object-fit: contain;background-color: black;" />
+      <img src="frontend/assets/images/husain_color-037.jpg" style="width: 300px; height: 300px;object-fit: cover;background-color: black;" />
       <a>Insane Who Sane</a>
     </div>
      <div class="pb-6">

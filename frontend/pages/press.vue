@@ -18,7 +18,7 @@ useSiteMetadata({
             <h1 animate-breath class=" text-2xl md:text-4xl animate-(--breath) text-white prose uppercase">
                 PR<span class="neonText header1">e</span>ss</h1>
         <div class="flex">
-<div class="grid grid-cols-3 gap-8 p-12 justify-center">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-12 justify-center">
   
     <div class="pb-6">
       <img src="frontend/assets/images/discototechno.jpg" style="width: 300px; height: 300px;object-fit: contain;background-color: black;" />

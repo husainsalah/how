@@ -17,19 +17,19 @@ useSiteMetadata({
 MUS<span class="neonText header1">I</span>C</h1>
 
 <div class="flex">
-<div class="grid grid-cols-2 mx-auto justify-center">
+<div class="grid grid-cols-1 md:grid-cols-2 mx-auto justify-center">
  <div class="p-8">
-    <img src="../assets/images/WDJT003.png" class="max-w-100" />
+    <img src="../assets/images/WDJT003.png" class="max-w-auto md:max-w-100" />
     <h4 class="text-sm md:text-sm text-white prose pt-2 font-weight-100 ">
         Don't Leave Me EP  [info] [bandcamp]</h4>
   </div> 
   <div class="p-8">
-    <img src="../assets/images/WDJT002.jpg" class="max-w-100"  />
+    <img src="../assets/images/WDJT002.jpg" class="max-w-auto md:max-w-100"  />
     <h4 class="text-sm md:text-sm text-white prose pt-2 font-weight-100 ">
         Keep Pushin' Aun EP [info] [bandcamp]</h4>
   </div>
   <div class="p-8">
-    <img src="../assets/images/WDJT001.jpg" class="max-w-100"  />
+    <img src="../assets/images/WDJT001.jpg" class="max-w-auto md:max-w-100"  />
     <h4 class="text-sm md:text-sm text-white prose pt-2 font-weight-100 ">
           Come Back To Me EP [info] [bandcamp]</h4>
   </div>

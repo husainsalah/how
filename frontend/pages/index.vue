@@ -81,7 +81,7 @@ ANCIENT <span class="neonText header2">FUTURE</span> MUSIC</h2>
         
          <div class="grid grid-cols-1 gap-8 p-8">
           <div class="justify-end">
-          <img src="../assets/images/WDJT003.png" class="max-w-100"  />
+          <img src="../assets/images/WDJT003.png" class="max-w-auto md:max-w-100"  />
           </div>
  
  <!--         <div class="">
