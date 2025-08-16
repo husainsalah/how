@@ -58,7 +58,7 @@ export default defineComponent({
     <div>
         
         <div class="note">
-          Reach out. Inquiries, collaborations and genuine connections are all welcome!
+          Reach out to House of Wadjet and Insane Who Sane here. Inquiries, collaborations and genuine connections are all welcome!
           <div class="success-note" v-if="showSuccess">
             Thank you for your email. We will be in touch with you soon.
           </div>
@@ -75,6 +75,10 @@ export default defineComponent({
         </div>
     </div>
     <div>
+        <h1 class="text-md !important mt-10">Distribution</h1>
+        <div class="note">
+          For distribution contact normtalley at gmail dot com
+        </div>
         <h1 class="text-md !important mt-10">Press Contact</h1>
         <div class="note">
           If you would like to reach out for press related matters contact h at vhe dot art.

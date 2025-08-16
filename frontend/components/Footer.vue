@@ -4,8 +4,10 @@ const currentYear = new Date().getFullYear();
 <template>
   <footer>
     <div class="container">
-      <div class="text-gray-600 uppercase flex flex-col justify-center py-8 text-xs lg:flex-row">
-        Copyright © {{ currentYear }} House of Wadjet Records
+      <div class="text-gray-600 uppercase mx-auto justify-center py-8 text-xs">
+        <center>
+          Copyright © {{ currentYear }} House of Wadjet Records
+        </center>
       </div>
     </div>
   </footer>
