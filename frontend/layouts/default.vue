@@ -20,11 +20,17 @@
 }
 .page{
   background-image: url('../assets/images/background-logo-3.png'),url('../assets/images/background.png');
-  background-position: center center , center center;
+  background-position: center 8.4em , center center;
   background-size: auto, auto;
   
   background-repeat: no-repeat, repeat;
   font-family:centuryGothic;
   color: #FFF;
+}
+.container{
+  @apply flex flex-col justify-between;
+}
+a:hover{
+  color:gray;
 }
 </style>

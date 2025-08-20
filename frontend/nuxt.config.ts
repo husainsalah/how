@@ -11,7 +11,14 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules: ["@nuxtjs/sanity", "@nuxt/fonts"],
+  modules: ["@nuxtjs/sanity", "@nuxt/fonts", "nuxt-auth-utils"],
+  /*session: {
+    //name: 'nuxt-session',
+    //password: process.env.SESSION_PASSWORD || 'wdjt003',
+    storageOptions: {
+      driver: 'memory' // or 'redis', 'fs', etc.
+    }
+  },*/
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID || "e48tsdac",
     dataset: process.env.NUXT_SANITY_DATASET || "production",
@@ -24,9 +31,15 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    protectedPassword: process.env.PROTECTED_PASSWORD || 'press',
+    authSecret: process.env.SESSION_PASSWORD || 'wdjt003',
     public: {
       studioUrl: process.env.NUXT_SANITY_STUDIO_URL,
+
     },
+
+
+
   },
   vite: {
     plugins: [tailwindcss()],

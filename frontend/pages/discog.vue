@@ -9,8 +9,8 @@ useSiteMetadata({
     <div class="relative">
     <div class="container relative">
        
-      <div
-        class="mx-auto xl:pt-20 pb-30 space-y-6 lg:px-12 flex flex-col items-center"
+     <div
+        class="mx-auto xl:pt-10 pb-10 space-y-6 lg:px-12 flex flex-col items-center"
       >
         <div class="flex flex-col gap-4 items-center">
             <h1 animate-breath class=" text-2xl md:text-4xl animate-(--breath) text-white prose uppercase">
@@ -19,19 +19,19 @@ MUS<span class="neonText header1">I</span>C</h1>
 <div class="flex">
 <div class="grid grid-cols-1 md:grid-cols-2 mx-auto justify-center">
  <div class="p-8">
-    <img src="../assets/images/WDJT003.png" class="max-w-auto md:max-w-100" />
-    <h4 class="text-sm md:text-sm text-white prose pt-2 font-weight-100 ">
-        Don't Leave Me EP  [info] [bandcamp]</h4>
+    <img src="../assets/images/WDJT003.png" class="record-image max-w-auto md:max-w-100" />
+    <h4 class="flex mx-auto justify-center text-sm md:text-sm text-white prose font-weight-100 ">
+       Insane Who Sane - Don't Leave Me EP  [WDJT-003]</h4>
   </div> 
   <div class="p-8">
-    <img src="../assets/images/WDJT002.jpg" class="max-w-auto md:max-w-100"  />
-    <h4 class="text-sm md:text-sm text-white prose pt-2 font-weight-100 ">
-        Keep Pushin' Aun EP [info] [bandcamp]</h4>
+    <img src="../assets/images/WDJT002.jpg" class="record-image max-w-auto md:max-w-100"  />
+    <h4 class="flex mx-auto justify-center text-sm md:text-sm text-white prose font-weight-100 ">
+       Insane Who Sane - Keep Pushin' Aun EP [WDJT-002]</h4>
   </div>
   <div class="p-8">
-    <img src="../assets/images/WDJT001.jpg" class="max-w-auto md:max-w-100"  />
-    <h4 class="text-sm md:text-sm text-white prose pt-2 font-weight-100 ">
-          Come Back To Me EP [info] [bandcamp]</h4>
+    <img src="../assets/images/WDJT001.jpg" class="record-image max-w-auto md:max-w-100"  />
+    <h4 class="flex mx-auto justify-center text-sm md:text-sm text-white prose font-weight-100 ">
+        Insane Who Sane - Come Back To Me EP [WDJT-001]</h4>
   </div>
 </div>
   <!--
@@ -62,3 +62,11 @@ MUS<span class="neonText header1">I</span>C</h1>
     </div>
     </div>
 </template>
+<style scoped>
+img.record-image {
+    width: 30em; 
+    height: 30em;
+    object-fit: contain;
+}
+
+</style>

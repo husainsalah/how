@@ -46,7 +46,7 @@ export default defineComponent({
     <div class="container relative">
        
       <div
-        class="mx-auto xl:pt-20 pb-30 space-y-6 lg:px-12 flex flex-col items-center"
+        class="mx-auto xl:pt-10 pb-10 space-y-6 lg:px-12 flex flex-col items-center"
       >
     <div class="">
             <h1 animate-breath class=" text-2xl md:text-4xl animate-(--breath) text-white prose uppercase">

@@ -1,18 +1,3 @@
-<script setup lang="ts">
-import { settingsQuery } from "~/sanity/queries";
-import type { SettingsQueryResult } from "~/sanity/types";
-
-const { data: settings } =
-  await useSanityQuery<SettingsQueryResult>(settingsQuery);
-
-// Computed properties
-const currentRouteNameIsNotHome = computed(() => {
-  const route = useRoute()
-  return route.path !== '/'
-})
-
-</script>
-
 <template>
   <header
     class="fixed bg-[url(/assets/images/background.png)] z-50 h-32 inset-0 bg-black-200 flex justify-center"
@@ -28,7 +13,7 @@ const currentRouteNameIsNotHome = computed(() => {
         <nav>
           <div>
             <div  class="flex justify-center p-1">   
-              <NuxtLink to="/"><img src="../assets/images/logo-header.png"></img></NuxtLink>
+              <NuxtLink to="/"><img src="../assets/images/logo-header.png" class="hover:text-gray-400"></img></NuxtLink>
             </div>
             <div>
               <ul
@@ -37,21 +22,21 @@ const currentRouteNameIsNotHome = computed(() => {
           >
             
             <li>
-              <NuxtLink to="/discog" class="uppercase hover:text-green-100">Music</NuxtLink>
+              <NuxtLink to="/discog" class="uppercase hover:text-gray-400">Music</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/artist" class="uppercase hover:text-green-100">Artists</NuxtLink>
-            </li>
-            
-            <li>
-              <NuxtLink to="/press" class="uppercase hover:text-green-100">Press</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/contact" class="uppercase hover:text-green-100">Contact</NuxtLink>
+              <NuxtLink to="/artist" class="uppercase hover:text-gray-400">Artists</NuxtLink>
             </li>
             
             <li>
-              <a href="https://houseofwadjet.bandcamp.com" class="uppercase hover:text-green-100" target="_blank">Merch</a>
+              <NuxtLink to="/press" class="uppercase hover:text-gray-400">Press</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/contact" class="uppercase hover:text-gray-400">Contact</NuxtLink>
+            </li>
+            
+            <li>
+              <a href="https://houseofwadjet.bandcamp.com" class="uppercase hover:text-gray-400" target="_blank">Merch</a>
             </li>
             
             
