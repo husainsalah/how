@@ -1,17 +1,17 @@
 <script setup lang="ts">
-
+/*
 import { settingsQuery } from "~/sanity/queries";
 import type { SettingsQueryResult } from "~/sanity/types";
 
 const { data: settings } =
   await useSanityQuery<SettingsQueryResult>(settingsQuery);
 
-
+*/
 useSiteMetadata({
   title: "House of Wadjet Records",
   description:
     "Ancient Future Music",
-  ogImage: settings?.value?.ogImage || "",
+//  ogImage: settings?.value?.ogImage || "",
 });
 
 usePageAnimation();

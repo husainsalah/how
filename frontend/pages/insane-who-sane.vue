@@ -16,7 +16,7 @@ useSiteMetadata({
         <div class="flex flex-col gap-4 items-center">
             <h1 animate-breath class=" text-2xl md:text-4xl animate-(--breath) text-white prose uppercase">
                 Insane<span class="neonText header1"> who </span>sane</h1>
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-1 md:grid-cols-2">
            <div class="p-4">
                 <img src="frontend/assets/images/husain_color-037.jpg"   />
                

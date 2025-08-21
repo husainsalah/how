@@ -6,13 +6,16 @@
       <div
         class="mx-auto xl:pt-10 pb-10 space-y-6 lg:px-12 flex flex-col items-center"
       >
+      <div class="flex mx-auto justify-end">
+          <button @click="handleLogout">Logout</button>
+      </div>
         <div class="flex flex-col gap-4 items-center">
     
             
         <h2>INSANE WHO SANE - DON’T LEAVE ME EP [WDJT-003]</h2>
 <h3>For Immediate Release 3 September, 2025</h3>
 
-      <button @click="handleLogout">Logout</button>
+    
     
     
     <main>
