@@ -1,5 +1,5 @@
 <script lang="ts">
-//import emailjs from '@emailjs/browser' // Correct import
+import emailjs from '@emailjs/browser'
 
 export default defineComponent({
   setup() { },
@@ -8,33 +8,91 @@ export default defineComponent({
       formData: {
         from_name: '',
         reply_to: '',
+        title: 'House of Wadjet inquiry',
         message: '',
-        to_name: 'Hagi Craig'
+        to_name: 'insane who sane'
       },
-      showSuccess: false
+      showSuccess: false,
+      isSubmitting: false
     }
   },
+  mounted() {
+    // Initialize EmailJS with your public key
+    emailjs.init('CygEfhM_VBDEiqfeq') // You'll need to replace this with your actual EmailJS public key
+  },
   methods: {
-    sendEmail() {
-  /*    emailjs
-        .sendForm('service_ywofrs7', 'template_vneyid5', this.$refs.form,
-          'zs2hKXXZF72uoaetc' // Public key should be provided directly
+    async sendEmail() {
+      if (this.isSubmitting) return
+      
+      // Validate form fields
+      if (!this.formData.from_name.trim() || !this.formData.reply_to.trim() || !this.formData.title.trim() || !this.formData.message.trim()) {
+        alert('Please fill in all fields before sending.')
+        return
+      }
+      
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      if (!emailRegex.test(this.formData.reply_to)) {
+        alert('Please enter a valid email address.')
+        return
+      }
+      
+      this.isSubmitting = true
+      
+      try {
+        const templateParams = {
+          to_name: 'Husain Salah',
+          from_name: this.formData.from_name,
+          reply_to: this.formData.reply_to,
+          title: this.formData.title,
+          message: this.formData.message,
+          to_email: 'husain.salah@gmail.com',
+          user_email: this.formData.reply_to,
+          user_name: this.formData.from_name,
+          user_title: this.formData.title,
+          user_message: this.formData.message,
+          // Standard EmailJS variables
+          name: this.formData.from_name,
+          email: this.formData.reply_to,
+          subject: this.formData.title,
+          content: this.formData.message
+        }
+
+        // Send email using EmailJS
+        console.log('Sending email with params:', templateParams)
+        const response = await emailjs.send(
+          'service_5i0lj5q', // Replace with your EmailJS service ID
+          'template_mopudua', // Replace with your EmailJS template ID
+          templateParams
         )
-        .then(
-          () => {
-            console.log('SUCCESS!');
-            this.showSuccess = true;
-            // Reset form fields
-            this.formData.from_name = '';
-            this.formData.reply_to = '';
-            this.formData.message = '';
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-            alert("Email not sent! Error: " + error.text);
-          },
-        );
-        */
+
+        if (response.status === 200) {
+          this.showSuccess = true
+          // Reset form
+          this.formData.from_name = ''
+          this.formData.reply_to = ''
+          this.formData.title = 'House of Wadjet inquiry'
+          this.formData.message = ''
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            this.showSuccess = false
+          }, 5000)
+        }
+      } catch (error: any) {
+        console.error('Error sending email:', error)
+        
+        // More specific error handling
+        if (error.status === 400) {
+          alert('Bad request - please check your EmailJS configuration')
+        } else if (error.status === 422) {
+          alert('Template validation failed - please check your template variables')
+        } else {
+          alert('There was an error sending your email. Please try again.')
+        }
+      } finally {
+        this.isSubmitting = false
+      }
     },
   },
 })
@@ -68,9 +126,14 @@ export default defineComponent({
             <input type="text" name="from_name" v-model="formData.from_name" placeholder="Your Name" />
             <label>Email</label>
             <input type="email" name="reply_to" v-model="formData.reply_to" placeholder="Your Email" />
+            <label>Inquiry Type</label>
+            <select name="title" v-model="formData.title" class="form-select">
+              <option value="House of Wadjet inquiry">House of Wadjet inquiry</option>
+              <option value="Insane Who Sane inquiry">Insane Who Sane inquiry</option>
+            </select>
             <label>Message</label>
             <textarea name="message" v-model="formData.message" cols="30" rows="5" placeholder="Message"></textarea>
-            <input type="submit" value="Send" />
+            <input type="submit" :value="isSubmitting ? 'Sending...' : 'Send'" :disabled="isSubmitting" />
           </form>
         </div>
     </div>
@@ -128,14 +191,15 @@ label {
 
 input[type='text'],
 input[type='email'],
-textarea {
+textarea,
+select {
   border: 1px solid #ccc;
   font-size: 1rem;
   padding: 6px 10px;
   border-radius: 4px;
   width: 100%;
   background-color: black;
-
+  color: white;
 }
 
 input[type='submit'] {

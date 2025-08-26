@@ -13,6 +13,7 @@
     "typegen": "sanity typegen generate"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@nuxt/fonts": "^0.11.0",
     "@nuxtjs/sanity": "^1.13.3",
     "@sanity/client": "^6.27.2",

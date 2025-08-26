@@ -20,7 +20,7 @@
     
     <main>
 
-<div class="grid grid-cols-2 p-12">
+<div class="grid grid-cols-1 md:grid-cols-2 p-2 md:p-12">
   <div>
     <img src="frontend/assets/images/WDJT003.png" class="w-auto px-4" />
   </div>
@@ -28,7 +28,7 @@
     <img src="frontend/assets/images/jacket003-2.png" class="w-auto px-4" />
   </div>
 </div>
-<div class="grid grid-cols-2 p-12">
+<div class="grid grid-cols-1 md:grid-cols-2 p-2 md:p-12">
   <div class="mx-4">
       <iframe width="100%" height="290px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2069088213%3Fsecret_token%3Ds-KZ6sqkkO70F&color=%23111111&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
    

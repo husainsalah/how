@@ -33,15 +33,15 @@ useSiteMetadata({
                 </div> 
                 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1918360727&color=%236e614f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                 -->
-                <h3 class="py-2">Current Residency:</h3>
+                <h3 class="py-2">Recent Events:</h3>
                 <div class="flex">
                 <img src="frontend/assets/images/flyers/soul-tone.png" class="w-1/4 px-2"  />
                 <img src="frontend/assets/images/flyers/soul-tone-3.jpg" class="w-1/4 px-2"  />
                 <img src="frontend/assets/images/flyers/soul-tone-2.jpg" class="w-1/4 px-2"  /> 
                 <img src="frontend/assets/images/flyers/soul-tone.png" class="w-1/4 px-2"  />
                 </div>
-                <h3 class="py-2">Past Events:</h3>
                 
+                <h3 class="py-2">Follow on social media</h3>
                 <div class="flex justify-between px-18 py-6">
                     <img src="frontend/assets/images/social-logos/instagram-logo.png" class="w-1/8" />
                     <img src="frontend/assets/images/social-logos/soundcloud.png" class="w-1/8" />

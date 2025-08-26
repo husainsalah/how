@@ -40,8 +40,9 @@ usePageAnimation();
         </h2>
         -->
         <h2 class="flex mx-auto justify-center text-lg md:text-lg text-white prose px-8 font-weight-100 uppercase">
-          DON'T LEAVE ME EP [WDJT-003] Sept 30, 2025
+          DON'T LEAVE ME EP [WDJT-003]
         </h2>
+        <h3 class="flex mx-auto justify-center text-base text-white px-8 font-weight-100">Available soon on bandcamp and record stores.</h3>
         <div class="grid grid-cols-1 p-8">
           <div class="justify-end">
             <a href="https://houseofwadjet.bandcamp.com" class="no-underline text-white hover:text-gray-400">
