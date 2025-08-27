@@ -19,7 +19,7 @@
       <div v-if="showPlaylist && playlist.length > 0" class="playlist-container">
         <h3 v-if="playlistTitle" class="playlist-title">{{ playlistTitle }}</h3>
         
-        <div class="playlist-grid">
+        <div :class="['playlist-grid', `playlist-grid--${playlistLayout}`]">
           <div 
             v-for="(video, index) in playlist" 
             :key="index"
@@ -173,6 +173,7 @@
   
   // Get thumbnail URL for a video
   const getThumbnailUrl = (video) => {
+    
     // Use provided thumbnail if available
     if (video.thumbnail) {
       return video.thumbnail
@@ -181,14 +182,17 @@
     // Generate platform-specific thumbnail
     const platform = video.platform || props.platform
     if (platform === 'youtube') {
-      return `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`
+      const url = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`
+      return url
     } else if (platform === 'vimeo') {
       // Vimeo doesn't have a simple thumbnail URL format, so return a placeholder
-      return 'https://placehold.co/320x180/333/white?text=Vimeo+Video'
+      const url = 'https://placehold.co/320x180/333/white?text=Vimeo+Video'
+      return url
     }
     
     // Fallback to generic placeholder
-    return 'https://placehold.co/320x180/333/white?text=Video'
+    const url = 'https://placehold.co/320x180/333/white?text=Video'
+    return url
   }
   
   // Format duration in seconds to MM:SS
@@ -275,6 +279,11 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
     width: 100%;
+  }
+  
+  /* Specific 3-column grid layout */
+  .playlist-grid--grid {
+    grid-template-columns: repeat(3, 1fr);
   }
   
   /* Playlist Item */

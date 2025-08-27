@@ -12,8 +12,8 @@
         <div class="flex flex-col gap-4 items-center">
     
             
-        <h2>INSANE WHO SANE - DON’T LEAVE ME EP [WDJT-003]</h2>
-<h3>For Immediate Release 3 September, 2025</h3>
+        <h2>INSANE WHO SANE - DON'T LEAVE ME EP [WDJT-003]</h2>
+
 
     
     
@@ -22,29 +22,42 @@
 
 <div class="grid grid-cols-1 md:grid-cols-2 p-2 md:p-12">
   <div>
-    <img src="frontend/assets/images/WDJT003.png" class="w-auto px-4" />
+    <img src="frontend/assets/images/WDJT003.png" class="w-auto py-2 md:py-4 px-2 md:px-4" />
   </div>
   <div>
-    <img src="frontend/assets/images/jacket003-2.png" class="w-auto px-4" />
+    <img src="frontend/assets/images/jacket003-2.png" class="w-auto py-2 md:py-4 px-2 md:px-4" />
   </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 p-2 md:p-12">
-  <div class="mx-4">
-      <iframe width="100%" height="290px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2069088213%3Fsecret_token%3Ds-KZ6sqkkO70F&color=%23111111&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+
+<div class="grid grid-cols-1 md:grid-cols-1 p-2 md:p-12">
+  <div>
+   <ResponsiveVideoList 
+    videoId="1113675209" 
+    platform="vimeo" 
+    title="WDJT-003"
+    :playlist="videoPlaylist"
+    :showPlaylist="true"
+    playlistTitle="Don't Leave Me EP"
+    playlistLayout="grid"
+    @videoChange="handleVideoChange"
+    :params="{
+      autoplay: false, loop: false, title: 0,
+      byline: 0,
+      portrait: 0,
+      playbar: 0,
+      sharing: 0
+    }"
+  />
+</div>
+ <div class="my-8">
+      <iframe width="100%" height="340px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2069088213%3Fsecret_token%3Ds-KZ6sqkkO70F&color=%23111111&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
    
   </div>
-  <div>
-    <ResponsiveVideo videoId="1107602300"  platform="vimeo" title=""  :params="{ autoplay: 0, mute: 0, loop: 0,
-   title: 0,
-    byline: 0,
-    portrait: 0,
-  playbar: 0,
-    sharing: 0}" />
-  </div>
+ 
 </div>
 
 
-
+<h3>For Immediate Release 3 September, 2025</h3>
 
 <ul>
   <li>
@@ -115,10 +128,13 @@ House of Wadjet Records, Ancient Future Music is a Detroit-based record label th
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 useSiteMetadata({
   title: "Don't Leave Me EP - Press",
   description: "Private page, for press personelle",
 });
+
 const handleLogout = async () => {
   try {
     await $fetch('/api/auth/logout', { method: 'POST' })
@@ -128,6 +144,36 @@ const handleLogout = async () => {
     console.error('Logout error:', error)
   }
 }
+
+const handleVideoChange = (video) => {
+  console.log('Video changed to:', video)
+  // You can add any logic here when a video is selected from the playlist
+}
+
+const videoPlaylist = ref([
+  {
+    id: 'lIWBg1aey6I',
+    platform: 'youtube',
+    title: 'Don\'t Leave Me',
+    author: 'Insane Who Sane',
+    duration: 60 // in seconds
+  },
+  {
+    id: 'YY8GGlfwS54',
+    platform: 'youtube',
+    title: 'Chase You (Indio Remix)',
+    author: 'Insane Who Sane',
+    duration: 60 // in seconds
+  },
+  {
+    id: 'aHLqkjpZsl8',
+    platform: 'youtube',
+    title: 'Chase You (Original Mix)',
+    author: 'Insane Who Sane',
+    duration: 60 // in seconds
+  },
+]);
+
 </script>
 <style scoped>
 main p {
