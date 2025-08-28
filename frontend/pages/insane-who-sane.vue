@@ -32,7 +32,7 @@ useSiteMetadata({
                     <a href="https://soundcloud.com/husainsalah" title="Insane who sane" target="_blank" style="color: #cccccc; text-decoration: none;">Insane who sane</a> · <a href="https://soundcloud.com/husainsalah/disco-bliss-for-javier" title="Disco Bliss" target="_blank" style="color: #cccccc; text-decoration: none;">Disco Bliss</a>
                 </div> 
                 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1918360727&color=%236e614f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                -->
+                
                 <h3 class="py-2">Recent Events:</h3>
                 <div class="flex">
                 <img src="frontend/assets/images/flyers/soul-tone.png" class="w-1/4 px-2"  />
@@ -40,14 +40,27 @@ useSiteMetadata({
                 <img src="frontend/assets/images/flyers/soul-tone-2.jpg" class="w-1/4 px-2"  /> 
                 <img src="frontend/assets/images/flyers/soul-tone.png" class="w-1/4 px-2"  />
                 </div>
+                -->
                 
-                <h3 class="py-2">Follow on social media</h3>
-                <div class="flex justify-between px-18 py-6">
-                    <img src="frontend/assets/images/social-logos/instagram-logo.png" class="w-1/8" />
-                    <img src="frontend/assets/images/social-logos/soundcloud.png" class="w-1/8" />
-                    <img src="frontend/assets/images/social-logos/bandcamp.png" class="w-1/8" />
-                    <img src="frontend/assets/images/social-logos/discogs.png" class="w-1/8" />
-                    <img src="frontend/assets/images/social-logos/blast-logo.png" class="w-1/8" />
+                <div class="flex justify-center items-center gap-8 px-18 py-6">
+                    <a href="https://www.instagram.com/insane_who_sane/" target="_blank" class="flex-shrink-0">
+                        <img src="frontend/assets/images/social-logos/instagram-logo.png" class="h-8 w-auto" />
+                    </a>
+                    <a href="https://soundcloud.com/husainsalah" target="_blank" class="flex-shrink-0">
+                        <img src="frontend/assets/images/social-logos/soundcloud.png" class="h-8 w-auto" />
+                    </a>
+                    <a href="https://houseofwadjet.bandcamp.com/" target="_blank" class="flex-shrink-0">
+                        <img src="frontend/assets/images/social-logos/bandcamp.png" class="h-8 w-auto" />
+                    </a>
+                    <a href="https://www.discogs.com/artist/11349167-insane-who-sane" target="_blank" class="flex-shrink-0">
+                        <img src="frontend/assets/images/social-logos/discogs.png" class="h-8 w-auto" />
+                    </a>
+                    <a href="https://www.blastradio.com/insane_who_sane" target="_blank" class="flex-shrink-0">
+                        <img src="frontend/assets/images/social-logos/blast-logo.png" class="h-8 w-auto" />
+                    </a>
+                    <a href="https://ra.co/dj/insanewhosane" target="_blank" class="flex-shrink-0">
+                        <img src="frontend/assets/images/social-logos/ra-logo.webp" class="h-8 w-auto" />
+                    </a>
                 </div>
             </div> 
             

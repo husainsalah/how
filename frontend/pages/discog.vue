@@ -31,7 +31,7 @@ MUS<span class="neonText header1">I</span>C</h1>
       <li>A2. Insane Who Sane - Chase You (Indio Remix)</li>
       <li>B1. Insane Who Sane - Chase You (Original Mix)</li>
     </ul>
-        <h3 class="flex mx-auto mt-4 justify-center text-base text-white font-weight-100">Coming soon on bandcamp and record stores.</h3>
+        <h3 class="flex mx-auto mt-4 justify-center text-base text-white font-weight-100">Coming soon to bandcamp and record stores.</h3>
   </div>
   <div class="p-8">
     <iframe style="border: 0; width: 100%; height: 520px;" src="https://bandcamp.com/EmbeddedPlayer/album=1155622392/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://houseofwadjet.bandcamp.com/album/keep-pushin-aun-ep">Keep Pushin Aun EP by Insane who sane Featuring DePeila</a></iframe>

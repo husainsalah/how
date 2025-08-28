@@ -59,8 +59,8 @@ useSiteMetadata({
 </template>
 <style scoped>
 img.press-image {
-    width: 60em; 
-    height: 22em;
+    width: 100em; 
+    height: 28em;
     object-fit: cover;
     background-color: black;
 }

@@ -30,6 +30,7 @@
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-1 p-2 md:p-12">
+  <h4 class="font-weight-100">Video Preview</h4>
   <div>
    <ResponsiveVideoList 
     videoId="1113675209" 
@@ -50,13 +51,14 @@
   />
 </div>
  <div class="my-8">
+    <h4>Listen to the Full Release</h4>
       <iframe width="100%" height="340px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2069088213%3Fsecret_token%3Ds-KZ6sqkkO70F&color=%23111111&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
    
   </div>
  
 </div>
 
-
+<div class="mx-8">
 <h3>For Immediate Release 3 September, 2025</h3>
 
 <ul>
@@ -119,12 +121,15 @@ House of Wadjet Records, Ancient Future Music is a Detroit-based record label th
 <h4>About John Beltran AKA INDIO</h4>
 <p>John Beltran has been producing ambient electronica music since the early 90's. He has had many legendary releases on various important labels over the past 30 years. John creates many different styles of music from ambient to techno to Latin and more.
 </p>
+</div>
     </main>
     </div>
     </div>
     </div>
     </div>
-  </div>
+    </div>
+  
+  
 </template>
 
 <script setup>
@@ -188,17 +193,17 @@ main ul{
 main h4{
   padding-top: 1em;
   font-size: 1.4em;
-  font-weight: bold;
+  font-weight: 500;
 }
 main h2{
   padding-top: 1em;
   font-size: 1.6em;
-  font-weight: bold;
+  font-weight: 500;
 }
 main h3{
   
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 500;
 }
 main .label{
   font-weight: bold;
