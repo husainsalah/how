@@ -4,7 +4,7 @@ import { NuxtImg } from '#components';
 
 useSiteMetadata({
   title: "Artists",
-  description: "House of Wadjet, Ancient Future Music. Arists and Collaborators.",
+  description: "Arists and Collaborators. House of Wadjet, Ancient Future Music.",
 });
 </script>
 <template>

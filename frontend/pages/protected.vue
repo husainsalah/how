@@ -2,36 +2,25 @@
   <div>
     <div class="relative">
     <div class="container relative">
-       
-      <div
-        class="mx-auto xl:pt-10 pb-10 space-y-6 lg:px-12 flex flex-col items-center"
-      >
-      <div class="flex mx-auto justify-end">
+      <main>
+      <div class="mx-auto xl:pt-10 pb-10 space-y-6 lg:px-12 flex flex-col items-center">
+        <div class="flex mx-auto justify-end">
           <button @click="handleLogout">Logout</button>
       </div>
-        <div class="flex flex-col gap-4 items-center">
-    
-            
+      <div class="flex flex-col gap-4 items-center">
         <h2>INSANE WHO SANE - DON'T LEAVE ME EP [WDJT-003]</h2>
-
-
     
-    
-    
-    <main>
-
-<div class="grid grid-cols-1 md:grid-cols-2 p-2 md:p-12">
-  <div>
-    <img src="frontend/assets/images/WDJT003.png" class="w-auto py-2 md:py-4 px-2 md:px-4" />
+<div class="grid grid-cols-1 md:grid-cols-1 p-2 md:p-12 w-full">
+ 
+ 
+ <div class="px-2 md:px-4 h-full">
+    <h4>Listen to the Full Release</h4>
+      <iframe width="100%" height="420px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2069088213%3Fsecret_token%3Ds-KZ6sqkkO70F&color=%23111111&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+   
   </div>
-  <div>
-    <img src="frontend/assets/images/jacket003-2.png" class="w-auto py-2 md:py-4 px-2 md:px-4" />
-  </div>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-1 p-2 md:p-12">
-  <h4 class="font-weight-100">Video Preview</h4>
-  <div>
+  
+  <div class="px-2 md:px-4">
+    <h4 class="font-weight-100">Video Preview</h4>
    <ResponsiveVideoList 
     videoId="1113675209" 
     platform="vimeo" 
@@ -50,15 +39,21 @@
     }"
   />
 </div>
- <div class="my-8">
-    <h4>Listen to the Full Release</h4>
-      <iframe width="100%" height="340px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2069088213%3Fsecret_token%3Ds-KZ6sqkkO70F&color=%23111111&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
-   
-  </div>
+ 
  
 </div>
 
-<div class="mx-8">
+<div class="grid grid-cols-1 md:grid-cols-2 p-2 md:p-12">
+  <div>
+    <img src="frontend/assets/images/WDJT003.png" class="w-auto py-2 px-2 md:px-4" />
+  </div>
+  <div>
+    <img src="frontend/assets/images/jacket003-2.png" class="w-auto py-2 px-2 md:px-4" />
+  </div>
+</div>
+
+
+<div class="mx-8 px-2 md:px-4">
 <h3>For Immediate Release 3 September, 2025</h3>
 
 <ul>
@@ -121,19 +116,144 @@ House of Wadjet Records, Ancient Future Music is a Detroit-based record label th
 <h4>About John Beltran AKA INDIO</h4>
 <p>John Beltran has been producing ambient electronica music since the early 90's. He has had many legendary releases on various important labels over the past 30 years. John creates many different styles of music from ambient to techno to Latin and more.
 </p>
+
+<!-- Download Release Section -->
+<div class="download-section my-12 text-center">
+  
+  <p class="mb-6">For distribution requests, contact <a href="mailto:normtalley@gmail.com">normtalley@gmail.com</a></p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+    <button 
+      @click="() => { console.log('Button clicked!'); openDownloadModal() }" 
+      class="download-button text-white font-thin py-3 px-8 rounded-lg text-lg"
+    >
+      Download WDJT-003
+    </button>
+    
+    <button 
+      @click="handleWholesaleRequest"
+      class="wholesale-button text-white hover:text-white font-thin py-3 px-8 rounded-lg text-lg border border-white border-radius-0 text-center no-underline"
+    >
+      Wholesale Requests
+    </button>
+  </div>
 </div>
-    </main>
+</div>
+    
     </div>
     </div>
-    </div>
-    </div>
-    </div>
+  </main>  
   
-  
+
+<!-- Download Modal - Moved outside main content -->
+<div v-if="showDownloadModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+  <div ref="modalRef" class="modal-content bg-white rounded-lg p-8 max-w-md w-full mx-4">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-xl font-bold">Download Release</h3>
+      <button 
+        @click="closeDownloadModal" 
+        class="text-gray-500 hover:text-white-700 text-2xl"
+      >
+        ×
+      </button>
+    </div>
+    
+    <form @submit.prevent="handleDownload" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-white-700 mb-2">Name *</label>
+        <input
+          id="name"
+          v-model="downloadForm.name"
+          type="text"
+          required
+          class="form-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your name"
+        />
+      </div>
+      
+      <div>
+        <label for="email" class="block text-sm font-medium text-white-700 mb-2">Email *</label>
+        <input
+          id="email"
+          v-model="downloadForm.email"
+          type="email"
+          required
+          class="form-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your email"
+        />
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-white-700 mb-2">Reason for Download *</label>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input
+              type="checkbox"
+              v-model="downloadForm.reasons.press"
+              class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            />
+            <span class="text-sm text-white-700">Press</span>
+          </label>
+          <label class="flex items-center">
+            <input
+              type="checkbox"
+              v-model="downloadForm.reasons.radioPlay"
+              class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            />
+            <span class="text-sm text-white-700">Radio Play</span>
+          </label>
+          <label class="flex items-center">
+            <label class="flex items-center">
+              <input
+                type="checkbox"
+                v-model="downloadForm.reasons.personal"
+                class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
+              <span class="text-sm text-white-700">Personal</span>
+            </label>
+          </label>
+        </div>
+      </div>
+      
+      <div>
+        <label for="notes" class="block text-sm font-medium text-white-700 mb-2">Notes</label>
+        <textarea
+          id="notes"
+          v-model="downloadForm.notes"
+          rows="3"
+          class="form-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          placeholder="Any additional notes or comments..."
+        ></textarea>
+      </div>
+      
+      <div class="pt-4">
+        <button
+          type="submit"
+          :disabled="!isFormValid"
+          :class="[
+            'download-submit-btn w-full py-3 px-4 font-medium transition-colors duration-200',
+            isFormValid 
+              ? 'bg-green-600 hover:bg-green-700 text-white cursor-pointer' 
+              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+          ]"
+        >
+          Download EP
+        </button>
+      </div>
+    </form>
+    
+    <p class="text-sm text-gray-600 mt-4 text-center">
+      By downloading, you agree to receive updates about future releases.
+    </p>
+  </div>
+</div>
+</div>
+    </div>
+    </div>
+
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, watch, nextTick } from 'vue'
 
 useSiteMetadata({
   title: "Don't Leave Me EP - Press",
@@ -157,7 +277,7 @@ const handleVideoChange = (video) => {
 
 const videoPlaylist = ref([
   {
-    id: 'lIWBg1aey6I',
+    id: 'lIWBg1aey6I',    
     platform: 'youtube',
     title: 'Don\'t Leave Me',
     author: 'Insane Who Sane',
@@ -179,6 +299,153 @@ const videoPlaylist = ref([
   },
 ]);
 
+// Download modal functionality
+const showDownloadModal = ref(false)
+const downloadForm = ref({
+  name: '',
+  email: '',
+  reasons: {
+    press: false,
+    radioPlay: false,
+    personal: false
+  },
+  notes: ''
+})
+const modalRef = ref(null)
+
+// Computed property to check if form is valid
+const isFormValid = computed(() => {
+  const hasName = downloadForm.value.name.trim() !== ''
+  const hasEmail = downloadForm.value.email.trim() !== ''
+  const hasReason = downloadForm.value.reasons.press || downloadForm.value.reasons.radioPlay || downloadForm.value.reasons.personal
+  
+  return hasName && hasEmail && hasReason
+})
+
+// Open download modal
+const openDownloadModal = () => {
+  showDownloadModal.value = true
+}
+
+// Close download modal
+const closeDownloadModal = () => {
+  showDownloadModal.value = false
+  // Reset form
+  downloadForm.value.name = ''
+  downloadForm.value.email = ''
+  downloadForm.value.reasons.press = false
+  downloadForm.value.reasons.radioPlay = false
+  downloadForm.value.reasons.personal = false
+  downloadForm.value.notes = ''
+}
+
+// Handle click outside modal to close
+const handleClickOutside = (event) => {
+  if (modalRef.value && !modalRef.value.contains(event.target)) {
+    closeDownloadModal()
+  }
+}
+
+// Handle keyboard events
+const handleKeydown = (event) => {
+  if (event.key === 'Escape') {
+    closeDownloadModal()
+  }
+}
+
+// Watch for modal state changes to add/remove click outside listener
+watch(showDownloadModal, (isOpen) => {
+  if (isOpen) {
+    nextTick(() => {
+      // Add a small delay to prevent immediate closure from click event conflicts
+      setTimeout(() => {
+        try {
+          document.addEventListener('click', handleClickOutside)
+          document.addEventListener('keydown', handleKeydown)
+        } catch (error) {
+          console.error('Error adding event listeners:', error)
+        }
+      }, 100) // 100ms delay to prevent race condition
+    })
+  } else {
+    try {
+      document.removeEventListener('click', handleClickOutside)
+      document.removeEventListener('keydown', handleKeydown)
+    } catch (error) {
+      console.error('Error removing event listeners:', error)
+    }
+  }
+})
+
+// Handle wholesale request
+const handleWholesaleRequest = () => {
+  const subject = 'Wholesale Request - WDJT-003'
+  const body = `Hi,
+
+I'm interested in wholesale pricing for the Insane Who Sane - Don't Leave Me EP [WDJT-003].
+
+Please provide wholesale pricing and minimum order quantities.
+
+Thanks!`
+  
+  const mailtoUrl = `mailto:normtalley@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  window.open(mailtoUrl, '_blank')
+}
+
+// Handle download
+const handleDownload = async () => {
+  if (!isFormValid.value) return
+  
+  try {
+    // Here you can add logic to:
+    // 1. Save the user's information to your database
+    // 2. Send a confirmation email
+    // 3. Log the download for analytics
+    
+    console.log('Download requested by:', {
+      name: downloadForm.value.name,
+      email: downloadForm.value.email,
+      reasons: downloadForm.value.reasons,
+      notes: downloadForm.value.notes
+    })
+    
+    // Use Dropbox for reliable direct downloads
+    const dropboxUrl = 'https://www.dropbox.com/scl/fi/i6bzi1inp4gv4lrx4kvls/INSANE-WHO-SANE-Chase-You-EP-masters-MP3-compressed-for-auditioning-sharing-20250829T181414Z-1-001.zip?rlkey=3g9up8n0mo309lmkh4ug13lsh&st=gbyw4h60&dl=1'
+    
+    try {
+      // Create a temporary link element to trigger direct download
+      const link = document.createElement('a')
+      link.href = dropboxUrl
+      link.download = 'Insane-Who-Sane-Dont-Leave-Me-EP-WDJT-003.zip'
+      link.target = '_blank'
+      
+      // Add to DOM, click, and remove
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      
+      // Close modal after successful download initiation
+      closeDownloadModal()
+      
+      // Show success message
+      alert('Download started! The file should begin downloading automatically.')
+      
+    } catch (downloadError) {
+      console.error('Direct download failed:', downloadError)
+      
+      // Fallback: Open Dropbox in new tab
+      const fallbackUrl = dropboxUrl.replace('/dl=1', '')
+      window.open(fallbackUrl, '_blank')
+      
+      closeDownloadModal()
+      alert('Opening Dropbox as fallback. Click the download button to save the file.')
+    }
+    
+  } catch (error) {
+    console.error('Download error:', error)
+    alert('There was an error with the download. Please try again.')
+  }
+}
 </script>
 <style scoped>
 main p {
@@ -207,5 +474,70 @@ main h3{
 }
 main .label{
   font-weight: bold;
+}
+
+/* Download modal styles */
+.download-section {
+  
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.download-button {
+  border: 1px solid white;
+  transition: all 0.3s ease;
+  border-radius: 0px !important;
+  font-size: .9em;
+} 
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 248, 5, 0.4);
+}
+
+.wholesale-button {
+  border: 1px solid white;
+  transition: all 0.3s ease;
+  border-radius: 0px !important;
+  font-size: .9em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.wholesale-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 248, 5, 0.4);
+  text-decoration: none;
+}
+
+.modal-overlay {
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(4px);
+  z-index: 9999; /* Higher z-index */}
+
+.modal-content {
+ background-color: black; /* Explicit white background */
+  z-index: 10000; 
+  color: white;
+}
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.download-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 </style>
