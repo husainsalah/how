@@ -207,14 +207,20 @@ House of Wadjet Records, Ancient Future Music is a Detroit-based record label th
             <span class="text-sm text-white-700">Radio Play</span>
           </label>
           <label class="flex items-center">
-            <label class="flex items-center">
-              <input
-                type="checkbox"
-                v-model="downloadForm.reasons.personal"
-                class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-              />
-              <span class="text-sm text-white-700">Personal</span>
-            </label>
+            <input
+              type="checkbox"
+              v-model="downloadForm.reasons.personal"
+              class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            />
+            <span class="text-sm text-white-700">Personal</span>
+          </label>
+          <label class="flex items-center">
+            <input
+              type="checkbox"
+              v-model="downloadForm.reasons.wholesaler"
+              class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            />
+            <span class="text-sm text-white-700">Wholesaler</span>
           </label>
         </div>
       </div>
@@ -312,7 +318,8 @@ const downloadForm = ref({
   reasons: {
     press: false,
     radioPlay: false,
-    personal: false
+    personal: false,
+    wholesaler: false
   },
   notes: ''
 })
@@ -322,7 +329,7 @@ const modalRef = ref(null)
 const isFormValid = computed(() => {
   const hasName = downloadForm.value.name.trim() !== ''
   const hasEmail = downloadForm.value.email.trim() !== ''
-  const hasReason = downloadForm.value.reasons.press || downloadForm.value.reasons.radioPlay || downloadForm.value.reasons.personal
+  const hasReason = downloadForm.value.reasons.press || downloadForm.value.reasons.radioPlay || downloadForm.value.reasons.personal || downloadForm.value.reasons.wholesaler
   
   return hasName && hasEmail && hasReason
 })
@@ -341,6 +348,7 @@ const closeDownloadModal = () => {
   downloadForm.value.reasons.press = false
   downloadForm.value.reasons.radioPlay = false
   downloadForm.value.reasons.personal = false
+  downloadForm.value.reasons.wholesaler = false
   downloadForm.value.notes = ''
 }
 
@@ -393,7 +401,7 @@ Please provide wholesale pricing and minimum order quantities.
 
 Thanks!`
   
-  const mailtoUrl = `mailto:normtalley@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  const mailtoUrl = `mailto:normtalley@gmail.com?cc=husain.salah@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   window.open(mailtoUrl, '_blank')
 }
 
