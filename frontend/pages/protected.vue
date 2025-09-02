@@ -9,7 +9,28 @@
       </div>
       <div class="flex flex-col gap-4 items-center">
         <h2>INSANE WHO SANE - DON'T LEAVE ME EP [WDJT-003]</h2>
-    
+        
+        <!-- Download and Wholesale Buttons - Moved to top -->
+        <div class="download-section my-2 text-center">
+          <p class="mb-6">For distribution requests, contact <a href="mailto:normtalley@gmail.com">normtalley@gmail.com</a></p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button 
+              @click="() => { console.log('Button clicked!'); openDownloadModal() }" 
+              class="download-button text-white font-thin py-3 px-8 rounded-lg text-lg"
+            >
+              Download WDJT-003
+            </button>
+            
+            <button 
+              @click="handleWholesaleRequest"
+              class="wholesale-button text-white hover:text-white font-thin py-3 px-8 rounded-lg text-lg border border-white border-radius-0 text-center no-underline"
+            >
+              Wholesale Requests
+            </button>
+          </div>
+        </div>
+      </div>
+
 <div class="grid grid-cols-1 md:grid-cols-1 p-2 md:p-12 w-full">
  
  
@@ -96,16 +117,16 @@
 <p>Press contact – h@vhe.art</p>
 <ul>
   <li>
-    <span class="label">IG:</span> @house.of.wadjet.records, @insane_who_sane</li>
+    <span class="label">IG:</span> <a href="https://www.instagram.com/house.of.wadjet.records/">@house.of.wadjet.records</a>, <a href="https://www.instagram.com/insane_who_sane/">@insane_who_sane</a></li>
   <li>
-    <span class="label">BandCamp:</span> https://houseofwadjet.bandcamp.com/
+    <span class="label">BandCamp:</span> <a href="https://houseofwadjet.bandcamp.com/">House Of Wadjet Records</a>
   </li>
   <li>
-    <span class="label">Distribution:</span> normtalley@gmail.com</li>
+    <span class="label">Distribution:</span> <a href="mailto:normtalley@gmail.com">normtalley@gmail.com</a></li>
   <li>
-    <span class="label">Mastering:</span> Scott Radkey at Sonic Impact</li>
+    <span class="label">Mastering:</span> <a href="https://www.facebook.com/scott.radke/">Scott Radkey</a> at Sonic Impact</li>
   <li>
-    <span class="label">Producer:</span> Husain Salah</li>
+    <span class="label">Producer:</span><a href="https://www.instagram.com/insane_who_sane/">Insane Who Sane</a></li>
   <li>
     <span class="label">Rights Society:</span> House of Wadjet Records / BMI
   </li>
@@ -122,31 +143,10 @@ House of Wadjet Records, Ancient Future Music is a Detroit-based record label th
 <p>John Beltran has been producing ambient electronica music since the early 90's. He has had many legendary releases on various important labels over the past 30 years. John creates many different styles of music from ambient to techno to Latin and more.
 </p>
 
-<!-- Download Release Section -->
-<div class="download-section my-12 text-center">
-  
-  <p class="mb-6">For distribution requests, contact <a href="mailto:normtalley@gmail.com">normtalley@gmail.com</a></p>
-  <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-    <button 
-      @click="() => { console.log('Button clicked!'); openDownloadModal() }" 
-      class="download-button text-white font-thin py-3 px-8 rounded-lg text-lg"
-    >
-      Download WDJT-003
-    </button>
-    
-    <button 
-      @click="handleWholesaleRequest"
-      class="wholesale-button text-white hover:text-white font-thin py-3 px-8 rounded-lg text-lg border border-white border-radius-0 text-center no-underline"
-    >
-      Wholesale Requests
-    </button>
-  </div>
-</div>
-</div>
-    
+
+      </div>
     </div>
-    </div>
-  </main>  
+  </main>
   
 
 <!-- Download Modal - Moved outside main content -->
@@ -493,8 +493,8 @@ main .label{
 .download-section {
   
   border-radius: 12px;
-  padding: 2rem;
-  margin: 2rem 0;
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
 .download-button {
