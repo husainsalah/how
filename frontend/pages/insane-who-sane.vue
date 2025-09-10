@@ -65,10 +65,6 @@ useSiteMetadata({
             </div> 
             
             <div>
-                <p class="pt-4">
-                    Born in Egypt and based in Detroit, Insane Who Sane is a DJ and producer who always hold true to the spirit of his label, House of Wadjet Records, Ancient Future Music.
-    Egyptian-born, Detroit-based producer and DJ Insane Who Sane is shaping a genuine sound through his label House of Wadjet Records. With releases that seamlessly blend elements of techno, house, and neo-soul, his music stays true to the label's guiding philosophy of "Ancient Future Music"—a sonic vision that honors the past while boldly pushing electronic music into new territories.
-                </p>
     <h3 class="text-md py-4">ORIGINS & JOURNEY</h3>
     <p>
     Born in Giza, Egypt, Insane Who Sane moved to the United States to pursue his passion for music. His journey began in New York City in 2007, where he established himself as a DJ known for throwing magical after-hours experiences that captivated the underground scene. While in NYC, working at Halcyon Record Store and the renowned Output Club, immersed him in the city's rich electronic music culture.
