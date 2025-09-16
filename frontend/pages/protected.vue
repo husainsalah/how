@@ -15,17 +15,28 @@
           <p class="mb-6">For distribution requests, contact <a href="mailto:normtalley@gmail.com">normtalley@gmail.com</a></p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button 
-              @click="() => { console.log('Button clicked!'); openDownloadModal() }" 
+              @click="handleWavDownload" 
               class="download-button text-white font-thin py-3 px-8 rounded-lg text-lg"
             >
-              Download WDJT-003
+              WAV
             </button>
-            
+            <button 
+              @click="handleAiffDownload" 
+              class="download-button text-white font-thin py-3 px-8 rounded-lg text-lg"
+            >
+              AIFF
+            </button>
+            <button 
+              @click="handlePressKitDownload" 
+              class="download-button text-white font-thin py-3 px-8 rounded-lg text-lg"
+            >
+              Press Kit
+          </button>
             <button 
               @click="handleWholesaleRequest"
               class="wholesale-button text-white hover:text-white font-thin py-3 px-8 rounded-lg text-lg border border-white border-radius-0 text-center no-underline"
             >
-              Wholesale Requests
+              Wholesale
             </button>
           </div>
         </div>
@@ -387,6 +398,72 @@ watch(showDownloadModal, (isOpen) => {
     }
   }
 })
+
+// Handle WAV download
+const handleWavDownload = () => {
+  const wavUrl = 'https://www.dropbox.com/scl/fi/3jzswg6alx014aemw29ql/wav.zip?rlkey=q88erc6eush93dig468tandwe&e=1&st=9szlxtj0&dl=1'
+  
+  try {
+    const link = document.createElement('a')
+    link.href = wavUrl
+    link.download = 'WDJT-003-WAV.zip'
+    link.target = '_blank'
+    
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    
+    alert('WAV download started!')
+  } catch (error) {
+    console.error('WAV download error:', error)
+    window.open(wavUrl, '_blank')
+    alert('Opening WAV download in new tab.')
+  }
+}
+
+// Handle AIFF download
+const handleAiffDownload = () => {
+  const aiffUrl = 'https://www.dropbox.com/scl/fi/t32hi4z1omutpi4tfyel6/aiff.zip?rlkey=wb8ktj3e6nglt402f12qpiu6p&e=1&dl=1'
+  
+  try {
+    const link = document.createElement('a')
+    link.href = aiffUrl
+    link.download = 'WDJT-003-AIFF.zip'
+    link.target = '_blank'
+    
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    
+    alert('AIFF download started!')
+  } catch (error) {
+    console.error('AIFF download error:', error)
+    window.open(aiffUrl, '_blank')
+    alert('Opening AIFF download in new tab.')
+  }
+}
+
+// Handle Press Kit download
+const handlePressKitDownload = () => {
+  const pressKitUrl = 'https://www.dropbox.com/scl/fi/lyoglp5rv4m0xx5osw6o4/press.zip?rlkey=o688nqoxy7yk4h9yoz13co5ju&e=1&st=bz246uov&dl=1'
+  
+  try {
+    const link = document.createElement('a')
+    link.href = pressKitUrl
+    link.download = 'WDJT-003-Press-Kit.zip'
+    link.target = '_blank'
+    
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    
+    alert('Press Kit download started!')
+  } catch (error) {
+    console.error('Press Kit download error:', error)
+    window.open(pressKitUrl, '_blank')
+    alert('Opening Press Kit download in new tab.')
+  }
+}
 
 // Handle wholesale request
 const handleWholesaleRequest = () => {
