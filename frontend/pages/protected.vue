@@ -80,11 +80,9 @@
 
 
 <div class="mx-8 px-2 md:px-4">
-<h3>For Immediate Release 3 September, 2025</h3>
-
 <ul>
   <li>
-    <span class="label">Artist:</span> Insane Who Sane
+    <span class="label">Artists:</span> Insane Who Sane and John Beltran AKA Indio
   </li>
   <li>
     <span class="label">Title:</span> Don’t Leave Me EP
@@ -93,7 +91,7 @@
    <span class="label"> Label:</span> House of Wadjet Records
   </li>
   <li>
-   <span class="label"> Release Date:</span> End of September (TBC)
+   <span class="label"> Release Date:</span> Mid October (TBC)
   </li>
   <li>
    <span class="label"> Cat. No.:</span> WDJT003
