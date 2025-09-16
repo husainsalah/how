@@ -27,12 +27,12 @@ useSiteMetadata({
                     <a href="https://soundcloud.com/husainsalah/camilo-radio-set" title="Obsession  - Radio La Clave 92.9 FM - Set" target="_blank" style="text-decoration: none;">Obsession  - Radio La Clave 92.9 FM</a>
                 </div>
                 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1533242125&color=%23322d24&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                <!--
+                
                 <div>
                     <a href="https://soundcloud.com/husainsalah" title="Insane who sane" target="_blank" style="color: #cccccc; text-decoration: none;">Insane who sane</a> · <a href="https://soundcloud.com/husainsalah/disco-bliss-for-javier" title="Disco Bliss" target="_blank" style="color: #cccccc; text-decoration: none;">Disco Bliss</a>
                 </div> 
                 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1918360727&color=%236e614f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                
+                <!--
                 <h3 class="py-2">Recent Events:</h3>
                 <div class="flex">
                 <img src="frontend/assets/images/flyers/soul-tone.png" class="w-1/4 px-2"  />

@@ -19,17 +19,16 @@ MUS<span class="neonText header1">I</span>C</h1>
 <div class="flex">
 <div class="grid grid-cols-1 md:grid-cols-2 mx-auto justify-center">
   <div class="p-8 md:p-8 p-4 flex flex-col justify-center items-center min-h-full">
-     <h2 class="flex mx-auto justify-center text-md md:text-md text-white prose font-weight-100 uppercase">
-          DON'T LEAVE ME EP [WDJT-003]
-        </h2>
-    <ul>
-      <li>A1. Insane Who Sane - Don't Leave Me</li>
-      <li>A2. Insane Who Sane - Chase You (Indio Remix)</li>
-      <li>B1. Insane Who Sane - Chase You (Original Mix)</li>
-    </ul>
-        <h3 class="flex mx-auto mt-4 justify-center text-base text-white font-weight-100">Coming soon to bandcamp and record stores.</h3>
+    
+    
+        <h3 class="flex mx-auto mt-4 justify-center text-md uppercase text-white font-weight-100">
+          WDJT-003 is coming soon
+        </h3>
   </div>
   <div class="p-8 md:p-8 p-4">
+     <p class="flex mx-auto justify-center text-sm md:text-base text-white prose font-weight-100 ">
+          Insane Who Sane - Don't Leave Me EP [WDJT-003]
+     </p>
     <img src="../assets/images/WDJT003.png" class="record-image max-w-auto md:max-w-100" />
     
   </div> 
@@ -78,8 +77,8 @@ MUS<span class="neonText header1">I</span>C</h1>
 </template>
 <style scoped>
 img.record-image {
-    width: 30em; 
-    height: 30em;
+    width: auto; 
+    height: auto;
     object-fit: contain;
 }
 
@@ -95,8 +94,8 @@ img.record-image {
     }
     
     img.record-image {
-        width: 20em; 
-        height: 20em;
+        width: auto; 
+        height: auto;
     }
 }
 
@@ -107,8 +106,8 @@ img.record-image {
     }
     
     img.record-image {
-        width: 15em; 
-        height: 15em;
+        width: auto !important; 
+        height: auto !important;
     }
 }
 

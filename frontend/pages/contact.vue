@@ -18,7 +18,7 @@ export default defineComponent({
   },
   mounted() {
     // Initialize EmailJS with your public key
-    emailjs.init('CygEfhM_VBDEiqfeq') // You'll need to replace this with your actual EmailJS public key
+    emailjs.init('CygEfhM_VBDEiqfeq') // Public Key replaced with actual key for husain.salah@gmail.com
   },
   methods: {
     async sendEmail() {
@@ -61,8 +61,8 @@ export default defineComponent({
         // Send email using EmailJS
         console.log('Sending email with params:', templateParams)
         const response = await emailjs.send(
-          'service_5i0lj5q', // Replace with your EmailJS service ID
-          'template_mopudua', // Replace with your EmailJS template ID
+          'service_5i0lj5q', // Replaced with actual EmailJS service ID
+          'template_mopudua', // Replaced with actual EmailJS template ID
           templateParams
         )
 
@@ -121,7 +121,7 @@ export default defineComponent({
             Thank you for your email. We will be in touch with you soon.
           </div>
           <form ref="form" @submit.prevent="sendEmail">
-            <NInput type="hidden" name="to_name" v-model="formData.to_name" />
+            <input type="hidden" name="to_name" v-model="formData.to_name" />
             <label>Name</label>
             <input type="text" name="from_name" v-model="formData.from_name" placeholder="Your Name" />
             <label>Email</label>
