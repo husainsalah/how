@@ -42,11 +42,11 @@ usePageAnimation();
         <h2 class="flex mx-auto justify-center text-lg md:text-lg text-white prose px-8 font-weight-100 uppercase">
           DON'T LEAVE ME EP [WDJT-003]
         </h2>
-        <h3 class="flex mx-auto justify-center text-base text-white prose px-8 font-weight-100">Coming soon to bandcamp and record stores.</h3>
+        <h3 class="flex mx-auto justify-center text-base text-white prose px-8 font-weight-100">Available now on bandcamp and at record stores.</h3>
         <div class="grid grid-cols-1 p-8">
           <div class="justify-end">
             <a href="https://houseofwadjet.bandcamp.com" class="no-underline text-white hover:text-gray-400">
-              <img src="../assets/images/WDJT003.png" class="flex mx-auto justify-center max-w-auto md:max-w-100"  />
+              <iframe class="responsive-iframe" style="border: 0; width: 100%;" src="https://bandcamp.com/EmbeddedPlayer/album=3594966337/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://houseofwadjet.bandcamp.com/album/insane-who-sane-dont-leave-me-ep">Insane Who Sane - Don&#39;t Leave Me EP by Insane Who Sane</a></iframe>
             </a>
           </div>
         </div>  
@@ -90,5 +90,33 @@ usePageAnimation();
   20%, 24%, 55%, 67%, 79%, 91% {       
     text-shadow: none;
   }
+}
+/* Mobile responsive iframe */
+.responsive-iframe {
+    height: 33em; /* Default height */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .responsive-iframe {
+        height: 24em; /* Reduced height on mobile */
+    }
+    
+    img.record-image {
+        width: auto; 
+        height: auto;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .responsive-iframe {
+        height: 24em; /* Even smaller on very small screens */
+    }
+    
+    img.record-image {
+        width: auto !important; 
+        height: auto !important;
+    }
 }
 </style>

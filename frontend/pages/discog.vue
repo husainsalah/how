@@ -22,14 +22,14 @@ MUS<span class="neonText header1">I</span>C</h1>
     
     
         <h3 class="flex mx-auto mt-4 justify-center text-md uppercase text-white font-weight-100">
-          WDJT-003 is coming soon
+          WDJT-004 is coming soon
         </h3>
   </div>
   <div class="p-8 md:p-8 p-4">
      <p class="flex mx-auto justify-center text-sm md:text-base text-white prose font-weight-100 ">
           Insane Who Sane - Don't Leave Me EP [WDJT-003]
      </p>
-    <img src="../assets/images/WDJT003.png" class="record-image max-w-auto md:max-w-100" />
+    <iframe class="responsive-iframe" style="border: 0; width: 100%;" src="https://bandcamp.com/EmbeddedPlayer/album=3594966337/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://houseofwadjet.bandcamp.com/album/insane-who-sane-dont-leave-me-ep">Insane Who Sane - Don&#39;t Leave Me EP by Insane Who Sane</a></iframe>
     
   </div> 
  
